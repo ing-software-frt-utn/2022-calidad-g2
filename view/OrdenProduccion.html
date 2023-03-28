@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Gestor de inspeccion</title>
+   
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand disabled" readonly=»readonly» href="#">Gestor de inspeccion</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="./OrdenProduccion.html">Crear Orden Produccion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Semaforo.html">Semaforo de Defectos</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <a class="btn btn-outline-success"  href="../Index.html">Salir</a>
+            </form>
+          </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="container-fluid "  id="OrdenProduccion">
+     <div  class="row  border border-dark mx-1 d-flex  justify-content-center">
+           <article class="row -xl-12">
+               <p class = " h1 text-center d-flex justify-content-center">Creacion de Orden de Producción</p>
+               <p class="h5">Datos de Orden de Produccion: </p>
+           </article>
+            <article class="row">
+                <div class = "col-xl-5 p-2 d-flex justify-content-center">
+                  <b>Nombre Supervisor de Linea:   </b>
+                  <br>
+                  <label id="inputSupervisorLinea" ></label>
+                </div>
+             
+                <div class = "col-xl-5 p-2  d-flex justify-content-center">
+                    <b>Turno: </b>
+                    <br>
+                    <label  id="inputTurno" ></label>
+                </div>
+               
+            </article>
+            <br>
+      <hr>
+      <br>
+        
+          <article class="row d-flex justify-content-around">
+                          <aside class="col-xl-5"><b>Nro. Orden de Produccion: </b><input  type="number" id="inputNroOrdenProduccion" style="width: 45%;" required ></aside>
+                            <aside class="col-xl-5  py-2"> <b>Nro. de Linea:   </b><input type="number" list="listadoNroLinea"  style="width: 75%;"  id="inputNroLinea" required disabled>
+                              <datalist id="listadoNroLinea">
+                              </datalist> 
+                             </aside>
+                            <aside class="col-xl-5  py-2"><b>Modelo:  </b><input type="text" list="listadoModelo" style="width: 75%;" id="inputModelo" required disabled>
+                              <datalist id="listadoModelo">
+                              </datalist> 
+                            </aside>
+                            <aside class="col-xl-5 py-2"><b>Color:  </b><input type="text" list="listadoColor" style="width: 75%;"  id="inputColor" required disabled>
+                              <datalist id="listadoColor">
+                              </datalist> 
+                           </aside>
+                           <aside class="col-xl-5 py-2" id="estadoOrdenProduccion">
+
+                           </aside>
+          </article>
+          <br>          
+            <article class="d-flex justify-content-between py-4">
+                <br>
+               
+                <button class="btn btn-success " type="button" id="btnCrearOrdenProduccion" disabled >CREAR ORDEN DE PRODUCCIÓN</button>
+                <button class="btn btn-danger" type="button" id="btnCancelarOrdenProduccion" >CANCELAR </button>
+                <br>
+            </article>
+     </div>
+     
+     <article class="row d-flex justify-content-center py-3"  id="tablaOperaciones">
+       <table class="d-flex justify-content-center ">
+           <h4 class="d-flex justify-content-center ">Operaciones habilitadas para las orden de produccion</h4>
+           <tbody>
+           <tr>
+               <td>
+                   <aside class="col-xl-4  col-sm-4 col-md-4">
+                       <button class="btn btn-warning " type="button" id="btnPausarOrdenProduccion" disabled>PAUSAR</button>
+                   </aside>
+               </td>
+               <td>
+                   <aside class="col-xl-4  col-sm-4 col-md-4">
+                       <button class="btn btn-success text-dark" type="button" id="btnContinuarOrdenProduccion" disabled>CONTINUAR</button>
+                   </aside>
+               </td>
+               <td>
+                   <aside class="col-xl-4  col-sm-4 col-md-4">
+                       <button class="btn btn-danger text-dark" type="button" id="btnFInalizarOrdenProduccion" disabled>FINALIZAR</button>
+                   </aside>
+               </td>
+           </tr>
+       </tbody>
+       </table>
+
+   </article>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="../controller/ControladorOrdenProduccion.js"></script>
+    
+</body>
+</html>
