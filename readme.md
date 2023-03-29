@@ -1,39 +1,46 @@
 # Sistema de Gestión de Calzado - Grupo 2
-### Descripcion del sistema 
-programacion para el frond-end 
+## Descripcion del sistema
+### Programacion para el frond-end 
 1. **HTML5**
 2. **CSS**
 3. **BOOTSTRAP**
 
-programacion para el back-end
+### Programacion para el back-end
 1. [JavaScript ES6](https://developer.mozilla.org/es/docs/Web/JavaScript)
+2. Node JS
+3. Express (API-REST)
 
-El proyecto contiene las siguientes **dependencias de producción**:
+### Framework
+1. Fetch
+2. Datatable   
+3. JQuery  
+
+### El proyecto contiene las siguientes **dependencias de producción**:
 1. **express**  módulo Infraestructura web rápida, minimalista y flexible para Node.js
 1. **dotenv**   módulo de carga Variables de entorno
 1. **MySql**	módulo nativo de javascript para acceder a bases de datos MySql.
 1. **cors**		módulo de middleware de express para configurar Cross-Origin Resource Sharing en una aplicación express.
 1. **babel**  módulo que sirve para configurar javascript moderno a codigo de javascript estandar(que sea lo mas entendible posible)
 
-También las siguientes **dependencias de desarrollo**:
+### También las siguientes **dependencias de desarrollo**:
 1. **nodemon**	    Es una herramienta que ayuda a desarrollar aplicaciones basadas en node.js al reiniciar automáticamente la aplicación de Node.js cuando se detectan cambios en los archivos de código javascript en el directorio del proyecto.
 2. **jest**		    Es un marco de pruebas automatizadas javascript.
 
-### documentacion 
+## Documentacion 
 - [Definicion del sistema(caso de uso, diagrama de colaboracion)](https://frtutneduar.sharepoint.com/:w:/s/Ing.DeSoft-Grupo/EdVG2cwCr_RAq05OZiCypgoBTeQjt_zpO5v6NWkooNs6ig?e=ce0kXw)
 - [Modelo de Dominio](https://frtutneduar.sharepoint.com/:i:/s/Ing.DeSoft-Grupo/ETXwhBNqGrJDl8WVJz0MI44BkASet3FcOuEza2L_UhergQ?e=ay9rcB)
 - [Modelo Entidad-Relacion](https://frtutneduar.sharepoint.com/:b:/s/Ing.DeSoft-Grupo/EY-zumCpTP1Lomq0669MxjUBnminm5kjooVNbsCQycNtVQ?e=dyFdyn)
 
-### Docentes: 
+## Docentes: 
 - Docente de Teoría: Mabel Torres. 
 - Docente de Prática: Francisco Vicente.
-### Integrantes:
+## Integrantes:
 - [Ceccarelli, Pablo Alejandro](https://github.com/pabloceccarelli)
 - [Garcia Moya, Priscila Belén](https://github.com/priscilabgmoya)
 - Gomez, Lourdes Carolina
 - Gonella, María Sofía
 
-### Instale las siguientes herramientas 
+## Instale las siguientes herramientas 
 Para que funcione está aplicación web necesitan tener instalado las siguientes Herramientas.
 
 1. **NodeJS** se puede descargar desde [https://nodejs.org/es/download/](https://nodejs.org/es/download/)
@@ -67,6 +74,7 @@ git clone https://github.com/priscilabgmoya/GestorDeInspecciones.git
 
 ```
 npm install
+npm install --save-dev babel-cli
 ```
 3. Con una terminal ubicada en el directorio del proyecto ejecutar el siquiente comando
 
